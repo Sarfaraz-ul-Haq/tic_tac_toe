@@ -1,5 +1,8 @@
+import Square from "@/components/square";
+import Board from "@/components/board";
+
 function Home() {
-  return <div>Homepage</div>;
+  return <Board />;
 }
 
 export default Home;
