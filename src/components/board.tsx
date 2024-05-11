@@ -22,7 +22,7 @@ function Board({ xIsNext, squares, onPlay }: any) {
   if (winner) {
     status = "Winner: " + winner;
   } else {
-    status = "Next Player: " + (xIsNext ? "X" : "O");
+    status = "Next Player: " + (xIsNext ? "✔️" : "🟢");
   }
 
   return (
