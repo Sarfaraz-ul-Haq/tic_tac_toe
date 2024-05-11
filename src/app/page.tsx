@@ -1,8 +1,7 @@
-import Square from "@/components/square";
-import Board from "@/components/board";
+import Game from "@/components/game";
 
 function Home() {
-  return <Board />;
+  return <Game />;
 }
 
 export default Home;
