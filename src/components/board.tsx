@@ -1,14 +1,8 @@
 "use client";
 
 import Square from "./square";
-import { useState } from "react";
 
-function Board() {
-  const [xIsNext, setXIsNext] = useState<boolean>(true);
-  const [squares, setSquares] = useState<Array<string | null>>(
-    Array(9).fill(null)
-  );
-
+function Board({ xIsNext, squares, onPlay }: any) {
   const handleClick = (i: number) => {
     if (squares[i] || calculateWinner(squares)) {
       return;
@@ -16,12 +10,11 @@ function Board() {
     const nextSquares = squares.slice();
 
     if (xIsNext) {
-      nextSquares[i] = "X";
+      nextSquares[i] = "✔️";
     } else {
-      nextSquares[i] = "O";
+      nextSquares[i] = "🟢";
     }
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+    onPlay(nextSquares);
   };
 
   const winner = calculateWinner(squares);
