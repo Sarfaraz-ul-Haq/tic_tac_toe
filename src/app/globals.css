@@ -15,6 +15,7 @@
 
 .square {
   @apply bg-gray-700 p-10 m-1 hover:bg-green-900;
+  @apply flex items-center justify-center; /* Centering content */
   width: 85px;
   height: 85px;
 }
